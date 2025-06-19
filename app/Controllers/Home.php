@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductModel; 
+use App\Models\ProductModel;
 
 class Home extends BaseController
 {
@@ -10,9 +10,11 @@ class Home extends BaseController
 
     function __construct()
     {
+        helper('form');
+        helper('number');
         $this->product = new ProductModel();
     }
-    
+
     public function index(): string
     {
         //return view('v_home');
